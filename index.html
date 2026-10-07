@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Connect</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="grid-overlay"></div>
+        <canvas id="particle-canvas"></canvas>
+    </div>
+
+    <main class="container">
+        <div class="card-wrapper" id="card-wrapper">
+            <div class="contact-card" id="contact-card">
+                <div class="card-content">
+                    <header class="card-header">
+                        <h1>Let's Connect</h1>
+                        <p>Have a question, idea, or project in mind? We'd love to hear from you.</p>
+                    </header>
+
+                    <form id="contact-form" class="contact-form" novalidate>
+                        <div class="form-group">
+                            <input type="text" id="fullName" name="fullName" placeholder=" " required>
+                            <label for="fullName">Enter your full name</label>
+                            <div class="error-message" id="fullName-error">Please enter your full name</div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col">
+                                <input type="tel" id="phone" name="phone" placeholder=" " required>
+                                <label for="phone">Enter your phone number</label>
+                                <div class="error-message" id="phone-error">Please enter a valid phone number</div>
+                            </div>
+                            <div class="col">
+                                <input type="email" id="email" name="email" placeholder=" " required>
+                                <label for="email">Enter your email address</label>
+                                <div class="error-message" id="email-error">Please enter a valid email address</div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" id="place" name="place" placeholder=" " required>
+                            <label for="place">Enter your city / location</label>
+                            <div class="error-message" id="place-error">Please enter your location</div>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder=" " rows="4" required></textarea>
+                            <label for="message">Tell us how we can help you...</label>
+                            <div class="error-message" id="message-error">Please enter your message</div>
+                        </div>
+
+                        <button type="submit" class="submit-btn" id="submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-icon">→</span>
+                            <div class="btn-glow"></div>
+                        </button>
+                    </form>
+
+                    <div class="success-message-container" id="success-message">
+                        <div class="success-icon">🚀</div>
+                        <h2>Message Sent Successfully!</h2>
+                        <p>Thank you for reaching out. We'll get back to you soon.</p>
+                        <button class="reset-btn" id="reset-btn">Send Another Message</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
